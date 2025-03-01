@@ -12,14 +12,18 @@ An application with the following layers:
 ./
 │── src/
 │   ├── entities/          # Domain models
-│   │   ├── Task.js
-│   ├── use-cases/         # Application logic
-│   │   ├── CreateTask.js
-│   │   ├── ListTasks.js
-│   ├── interfaces/        # Adapters (Controllers, UI, etc.)
-│   │   ├── TaskController.js
-│   ├── infrastructure/    # External services (DB, API)
-│   │   ├── TaskRepository.js
-│   ├── main.js            # Entry point
-└── package.json
+│   │   ├── Task.ts
+│   ├── use-cases/        # Application logic
+│   │   ├── CreateTask.ts
+│   │   ├── ListTasks.ts
+│   ├── interfaces/       # Adapters (Controllers, UI, etc.)
+│   │   ├── TaskController.ts
+│   ├── infrastructure/   # External services (DB, API)
+│   │   ├── TaskRepository.ts
+│   ├── main.ts           # Entry point
+│── .gitignore
+│── LICENSE
+│── package.json
+│── README.md
+└── tsconfig.json
 ```
