@@ -11,16 +11,16 @@ An application with the following layers:
 ```
 ./
 │── src/
-│   ├── entities/         # Domain models
+│   ├── entities/              # Domain models
 │   │   ├── Task.ts
-│   ├── use-cases/        # Application logic
+│   ├── use-cases/             # Application logic
 │   │   ├── CreateTask.ts
 │   │   ├── ListTasks.ts
-│   ├── interfaces/       # Adapters (Controllers, UI, etc.)
+│   ├── interfaces/            # Adapters (Controllers, UI, etc.)
 │   │   ├── TaskController.ts
-│   ├── infrastructure/   # External services (DB, API)
+│   ├── infrastructure/        # External services (DB, API)
 │   │   ├── TaskRepository.ts
-│   ├── main.ts           # Entry point
+│   ├── main.ts                # Entry point
 │── .gitignore
 │── LICENSE
 │── package.json
