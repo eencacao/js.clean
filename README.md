@@ -11,7 +11,7 @@ An application with the following layers:
 ```
 ./
 │── src/
-│   ├── entities/          # Domain models
+│   ├── entities/         # Domain models
 │   │   ├── Task.ts
 │   ├── use-cases/        # Application logic
 │   │   ├── CreateTask.ts
