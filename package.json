@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "dev": "tsc && node dist/main.js"
+    "dev": "tsc && node dist/main.js",
+    "test": "tsc && node --test dist/tests/unit/todo_usecase.test.js dist/tests/functional/api.test.js"
   },
   "license": "CC0-1.0",
   "devDependencies": {
