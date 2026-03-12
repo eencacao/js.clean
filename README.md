@@ -1,29 +1,50 @@
-# CLEAN
+# Todo API — TypeScript Clean Architecture
 
-### Exercise: Task Management App
+A RESTful To-Do list API built with TypeScript, following Clean Architecture.
+Uses only Node.js built-in modules (no runtime dependencies).
 
-An application with the following layers:  
-- Entities (Domain Layer) → Pure business logic, independent of frameworks.   
-- Use Cases (Application Layer) → Orchestrates business logic and defines application behavior.   
-- Adapters (Interface Layer) → Controllers, presenters, and UI elements.   
-- Infrastructure (Data Layer) → External services (database, APIs, frameworks).   
+## Architecture
 
 ```
-./
-│── src/
-│   ├── entities/              # Domain models
-│   │   ├── Task.ts
-│   ├── use-cases/             # Application logic
-│   │   ├── CreateTask.ts
-│   │   ├── ListTasks.ts
-│   ├── interfaces/            # Adapters (Controllers, UI, etc.)
-│   │   ├── TaskController.ts
-│   ├── infrastructure/        # External services (DB, API)
-│   │   ├── TaskRepository.ts
-│   ├── main.ts                # Entry point
-│── .gitignore
-│── LICENSE
-│── package.json
-│── README.md
-└── tsconfig.json
+src/
+├── entities/        Pure domain model (Todo)
+├── interfaces/      Repository contract
+├── usecases/        Business logic (CRUD)
+├── infrastructure/  In-memory repository
+└── adapters/        HTTP handlers
 ```
+
+## API Endpoints
+
+| Method | Endpoint     | Description    |
+|--------|--------------|----------------|
+| GET    | /todos       | List all todos |
+| POST   | /todos       | Create a todo  |
+| GET    | /todos/{id}  | Get by ID      |
+| PUT    | /todos/{id}  | Update a todo  |
+| DELETE | /todos/{id}  | Delete a todo  |
+
+## Todo Object
+
+```json
+{
+  "id": 1,
+  "title": "Buy groceries",
+  "completed": false,
+  "created_at": "2026-03-12T11:00:00Z"
+}
+```
+
+## Requirements
+
+- Node.js 18+
+- npm
+
+## Setup & Run
+
+```bash
+npm install
+npm run dev
+```
+
+Server runs on `http://localhost:8080`.

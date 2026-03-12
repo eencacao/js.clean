@@ -2,16 +2,6 @@ dist/
 node_modules/
 npm-debug.log
 *.log
-*.log.*
-*.log-*
-*.log/*
-*.log-*/
-package-lock.json
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.pem
-*.key
 coverage/
+.DS_Store
